@@ -1,0 +1,8 @@
+name: 'custom_group'
+type: module
+description: 'Custom group services and features'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Custom'
+dependencies:
+  - group
+  - domain_group

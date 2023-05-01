@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_group.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function custom_group_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_group module.
+    case 'help.page.custom_group':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom group services and features') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function custom_group_views_data_alter(array &$data) {
+  $data['views']['gid'] = array(
+    'title' => t('Group titles'),
+    'filter' => array(
+      'title' => t('Group titles'),
+      'help' => t('Specify a list of titles a node can have.'),
+      'field' => 'gid',
+      'id' => 'group_titles'
+    ),
+  );
+}

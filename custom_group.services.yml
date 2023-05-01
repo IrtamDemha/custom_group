@@ -1,0 +1,4 @@
+services:
+  custom_group.helper:
+    class: Drupal\custom_group\GroupService
+    arguments: ['@entity_type.manager', '@current_route_match', '@request_stack','@config.factory','@cache.default']
