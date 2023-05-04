@@ -34,7 +34,7 @@ function custom_group_views_data_alter(array &$data) {
     'title' => t('Group titles'),
     'filter' => array(
       'title' => t('Group titles'),
-      'help' => t('Specify a list of titles a node can have.'),
+      'help' => t('Convert input text to select list'),
       'field' => 'gid',
       'id' => 'group_titles'
     ),
