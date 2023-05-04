@@ -1,0 +1,9 @@
+custom_group.group_settings_form:
+  path: '/group/{group}/Gdomain-settings'
+  defaults:
+    _form: '\Drupal\custom_banner\Form\DomainGroupSettingsForm'
+    _title: 'Domain Group Settings'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _group_permission: 'administer group domain settings'
